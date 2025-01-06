@@ -67,7 +67,14 @@
 
 <!-- Actividades -->
 <div class="container my-5" id="actividades">
-    <h2 class="text-center mb-4">Actividades</h2>
+    
+    
+    
+    <h2 class="text-center mb-4">Actividades <span id="current-year"></span></h2>
+    <script>
+        document.getElementById("current-year").innerText = new Date().getFullYear();
+    </script>
+
     <p class="text-center">Descubre las mejores actividades para disfrutar en tu próximo viaje.</p>
     <div class="row g-4">
         <div class="col-md-4">
