@@ -72,7 +72,17 @@
     
     <h2 class="text-center mb-4">Actividades <span id="current-year"></span></h2>
     <script>
-        document.getElementById("current-year").innerText = new Date().getFullYear();
+        // Obtener la fecha actual
+        const today = new Date();
+        const currentYear = today.getFullYear();
+
+        // Determinar si es diciembre
+        const yearDisplay = today.getMonth() === 11 
+            ? `${currentYear} - ${currentYear + 1}` // Diciembre: Año actual - Año siguiente
+            : `${currentYear}`;                    // Otros meses: Solo Año actual
+
+        // Insertar el resultado en el título
+        document.getElementById("current-year").innerText = yearDisplay;
     </script>
 
     <p class="text-center">Descubre las mejores actividades para disfrutar en tu próximo viaje.</p>
