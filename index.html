@@ -160,7 +160,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card">
+            <div class="card" id="trekking">
                 <img src="images/trekking.jpg" class="card-img-top" alt="Actividad 2">
                 <div class="card-body">
                     <h5 class="card-title">Senderismo.</h5>
@@ -264,6 +264,8 @@
             activitiesDescription: "Descubre las mejores actividades para disfrutar en tu próximo viaje.",
             cabalgatasTitle: "Cabalgatas",
             cabalgatasDescription: "Embárcate en una aventura única a caballo, explorando la belleza inexplorada de paisajes silvestres que despiertan tus sentidos y conectan con la naturaleza.",
+            trekkingTitle: "Senderismo",
+            trekkingDescription: "Explora senderos increíbles y disfruta de vistas espectaculares.",
 
         },
         en: {
@@ -275,6 +277,8 @@
             activitiesDescription: "Discover the best activities to enjoy on your next trip.",
             cabalgatasTitle: "Horseback riding",
             cabalgatasDescription: "Embark on a unique adventure on horseback, exploring the unexplored beauty of wild landscapes that awaken your senses and connect you with nature.",
+            trekkingTitle: "Trekking/Hiking",
+            trekkingDescription: "Explore incredible trails and enjoy spectacular views.",
         }
     };
 
@@ -304,6 +308,8 @@
         document.querySelector("#actividades p").innerText = translation[lang].activitiesDescription;
         document.querySelector("#cabalgatas h5").innerText = translation[lang].cabalgatasTitle;
         document.querySelector("#cabalgatas p").innerText = translation[lang].cabalgatasDescription;
+        document.querySelector("#trekking h5").innerText = translation[lang].trekkingTitle;
+        document.querySelector("#trekking p").innerText = translation[lang].trekkingDescription;
 
         // Cambiar los textos de la barra de navegación
         const navLinks = document.querySelectorAll(".nav-link");
