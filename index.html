@@ -179,7 +179,7 @@
         <div class="col-md-4">
             <div class="card">
                 <img src="images/astro.jpg" class="card-img-top" alt="Actividad 3">
-                <div class="card-body">
+                <div class="card-body" id="astro">
                     <h5 class="card-title">Astroturismo</h5>
                     <p class="card-text">Descubre la magia del universo bajo cielos despejados, lejos de la contaminación lumínica.</p>
                 </div>
@@ -266,6 +266,8 @@
             cabalgatasDescription: "Embárcate en una aventura única a caballo, explorando la belleza inexplorada de paisajes silvestres que despiertan tus sentidos y conectan con la naturaleza.",
             trekkingTitle: "Senderismo",
             trekkingDescription: "Explora senderos increíbles y disfruta de vistas espectaculares.",
+            astroTitle: "Astroturismo",
+            astroDescription: "Descubre la magia del universo bajo cielos despejados, lejos de la contaminación lumínica.",
 
         },
         en: {
@@ -279,6 +281,8 @@
             cabalgatasDescription: "Embark on a unique adventure on horseback, exploring the unexplored beauty of wild landscapes that awaken your senses and connect you with nature.",
             trekkingTitle: "Trekking/Hiking",
             trekkingDescription: "Explore incredible trails and enjoy spectacular views.",
+            astroTitle: "Astrotourism",
+            astroDescription: "Discover the magic of the universe under clear skies, far from light pollution.",
         }
     };
 
@@ -310,6 +314,8 @@
         document.querySelector("#cabalgatas p").innerText = translation[lang].cabalgatasDescription;
         document.querySelector("#trekking h5").innerText = translation[lang].trekkingTitle;
         document.querySelector("#trekking p").innerText = translation[lang].trekkingDescription;
+        document.querySelector("#astro h5").innerText = translation[lang].astroTitle;
+        document.querySelector("#astro p").innerText = translation[lang].astroDescription;
 
         // Cambiar los textos de la barra de navegación
         const navLinks = document.querySelectorAll(".nav-link");
