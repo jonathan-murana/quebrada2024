@@ -194,14 +194,14 @@
     <p class="text-center">Promovemos actividades de conservación y difusión del área protegida.</p>
     <div class="row g-4">
         <div class="col-md-4">
-            <div class="card">
+            <div class="card" id="cuervos">
                 <img src="images/cuervos.jpg" class="card-img-top" alt="Hotel 1">
                 <div class="card-body">
                     <h5 class="card-title">Cría cuervos</h5>
                     <p class="card-text">Documental sobre la fauna de la zona.</p>
                      <!-- Enlace a YouTube con ícono -->
         <a href="https://www.youtube.com/watch?v=QUoS6zR4qd4" class="youtube-link" target="_blank">
-            <i class="fab fa-youtube"></i> Ver en YouTube
+            <i class="fab fa-youtube"></i> <span>Ver en YouTube</span>
         </a>
                 </div>
             </div>
@@ -270,6 +270,10 @@
             astroDescription: "Descubre la magia del universo bajo cielos despejados, lejos de la contaminación lumínica.",
             conservationTitle: "Conservación y difusión",
             conservationDescription: "Promovemos actividades de conservación y difusión del área protegida.",
+            criaCuervosTitle: "Cría cuervos",
+            criaCuervosDescription: "Documental sobre la fauna de la zona.",
+            criaCuervosDescription2: "Ver en YouTube",
+
         },
         en: {
             title: "Quebrada de los Cuervos",
@@ -286,6 +290,10 @@
             astroDescription: "Discover the magic of the universe under clear skies, far from light pollution.",
             conservationTitle: "Conservation and dissemination",
             conservationDescription: "We promote conservation and dissemination activities for the protected area.",
+            criaCuervosTitle: "Raise crows",
+            criaCuervosDescription: "Documentary about the fauna of the area.",
+            criaCuervosDescription2: "Watch on YouTube",
+
         }
     };
 
@@ -321,6 +329,10 @@
         document.querySelector("#astro p").innerText = translation[lang].astroDescription;
         document.querySelector("#conservation h2").innerText = translation[lang].conservationTitle;
         document.querySelector("#conservation p").innerText = translation[lang].conservationDescription;
+        document.querySelector("#cuervos h5").innerText = translation[lang].criaCuervosTitle;
+        document.querySelector("#cuervos p").innerText = translation[lang].criaCuervosDescription;
+        document.querySelector("#cuervos span").innerText = translation[lang].criaCuervosDescription2;
+
 
         // Cambiar los textos de la barra de navegación
         const navLinks = document.querySelectorAll(".nav-link");
