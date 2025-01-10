@@ -232,7 +232,7 @@
     <h2>Contacto</h2>
     <p>Mail: <a href="mailto:33cabure@gmail.com">33cabure@gmail.com</a></p>
 
-    <p>Síguenos en: 
+    <p> <span>Síguenos en:</span> 
         <a href="https://www.instagram.com/sitio_jual_bilu" target="_blank" class="instagram-link">
             <i class="fab fa-instagram"></i> Instagram
         </a>
@@ -275,6 +275,10 @@
             criaCuervosDescription2: "Ver en YouTube",
             volunteeringTitle: "Voluntariado en sitio Jual Bilú",
             volunteeringDescription: "Monitoreo de vida silvestre, fototrampeo, bio construcción, en entre otras actividades.",
+            contactoTitle: "Contacto",
+            contactoDescription: "Síguenos en:",
+            footerDescription: "\u00A9 2024 Explora la quebrada. Todos los derechos reservados.",
+
 
         },
         en: {
@@ -297,6 +301,9 @@
             criaCuervosDescription2: "Watch on YouTube",
             volunteeringTitle: "Volunteering on site Jual Bilú",
             volunteeringDescription: "Wildlife monitoring, camera trapping, bio construction, among other activities.",
+            contactoTitle: "Contact",
+            contactoDescription: "Follow us on:",
+            footerDescription: "\u00A9 2024 Explora la quebrada. All rights reserved.",
         }
     };
 
@@ -337,6 +344,10 @@
         document.querySelector("#cuervos span").innerText = translation[lang].criaCuervosDescription2;
         document.querySelector("#volunteering h5").innerText = translation[lang].volunteeringTitle;
         document.querySelector("#volunteering p").innerText = translation[lang].volunteeringDescription;
+        document.querySelector("#contacto h2").innerText = translation[lang].contactoTitle;
+        document.querySelector("#contacto span").innerText = translation[lang].contactoDescription;
+        document.querySelector("footer p").innerText = translation[lang].footerDescription;
+
 
 
         // Cambiar los textos de la barra de navegación
