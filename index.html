@@ -189,7 +189,7 @@
 </div>
 
 <!-- Alojamiento -->
-<div class="container my-5" id="conservacion">
+<div class="container my-5" id="conservation">
     <h2 class="text-center mb-4">Conservación y difusión</h2>
     <p class="text-center">Promovemos actividades de conservación y difusión del área protegida.</p>
     <div class="row g-4">
@@ -268,7 +268,8 @@
             trekkingDescription: "Explora senderos increíbles y disfruta de vistas espectaculares.",
             astroTitle: "Astroturismo",
             astroDescription: "Descubre la magia del universo bajo cielos despejados, lejos de la contaminación lumínica.",
-
+            conservationTitle: "Conservación y difusión",
+            conservationDescription: "Promovemos actividades de conservación y difusión del área protegida.",
         },
         en: {
             title: "Quebrada de los Cuervos",
@@ -283,6 +284,8 @@
             trekkingDescription: "Explore incredible trails and enjoy spectacular views.",
             astroTitle: "Astrotourism",
             astroDescription: "Discover the magic of the universe under clear skies, far from light pollution.",
+            conservationTitle: "Conservation and dissemination",
+            conservationDescription: "We promote conservation and dissemination activities for the protected area.",
         }
     };
 
@@ -316,6 +319,8 @@
         document.querySelector("#trekking p").innerText = translation[lang].trekkingDescription;
         document.querySelector("#astro h5").innerText = translation[lang].astroTitle;
         document.querySelector("#astro p").innerText = translation[lang].astroDescription;
+        document.querySelector("#conservation h2").innerText = translation[lang].conservationTitle;
+        document.querySelector("#conservation p").innerText = translation[lang].conservationDescription;
 
         // Cambiar los textos de la barra de navegación
         const navLinks = document.querySelectorAll(".nav-link");
