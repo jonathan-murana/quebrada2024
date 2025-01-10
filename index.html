@@ -207,7 +207,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card">
+            <div class="card" id="volunteering">
                 <img src="images/vol.jpg" class="card-img-top" alt="Hotel 2">
                 <div class="card-body">
                     <h5 class="card-title">Voluntariado en sitio Jual Bilú</h5>
@@ -273,6 +273,8 @@
             criaCuervosTitle: "Cría cuervos",
             criaCuervosDescription: "Documental sobre la fauna de la zona.",
             criaCuervosDescription2: "Ver en YouTube",
+            volunteeringTitle: "Voluntariado en sitio Jual Bilú",
+            volunteeringDescription: "Monitoreo de vida silvestre, fototrampeo, bio construcción, en entre otras actividades.",
 
         },
         en: {
@@ -293,7 +295,8 @@
             criaCuervosTitle: "Raise crows",
             criaCuervosDescription: "Documentary about the fauna of the area.",
             criaCuervosDescription2: "Watch on YouTube",
-
+            volunteeringTitle: "Volunteering on site Jual Bilú",
+            volunteeringDescription: "Wildlife monitoring, camera trapping, bio construction, among other activities.",
         }
     };
 
@@ -332,6 +335,8 @@
         document.querySelector("#cuervos h5").innerText = translation[lang].criaCuervosTitle;
         document.querySelector("#cuervos p").innerText = translation[lang].criaCuervosDescription;
         document.querySelector("#cuervos span").innerText = translation[lang].criaCuervosDescription2;
+        document.querySelector("#volunteering h5").innerText = translation[lang].volunteeringTitle;
+        document.querySelector("#volunteering p").innerText = translation[lang].volunteeringDescription;
 
 
         // Cambiar los textos de la barra de navegación
