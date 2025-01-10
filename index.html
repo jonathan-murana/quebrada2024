@@ -9,6 +9,18 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+
+    .dropdown-menu a img {
+        border-radius: 50%;
+    }
+    .dropdown-menu {
+        min-width: 120px;
+    }
+    .dropdown-menu a {
+        font-size: 14px;
+    }
+
+
         .youtube-link {
             display: flex;
             align-items: center;
@@ -30,7 +42,9 @@
 </head>
 <body>
 
-<!-- Navbar -->
+
+    
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Quebrada de los Cuervos</a>
@@ -38,16 +52,35 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav me-auto">
                 <li class="nav-item"><a class="nav-link" href="#portada">Portada</a></li>
                 <li class="nav-item"><a class="nav-link" href="#fotos">Paisajes</a></li>
                 <li class="nav-item"><a class="nav-link" href="#actividades">Actividades</a></li>
                 <li class="nav-item"><a class="nav-link" href="#conservacion">Conservación</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
             </ul>
+            <!-- Selector de Idioma -->
+            <div class="dropdown ms-auto">
+                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://flagcdn.com/w40/es.png" alt="Idioma" width="20" class="me-2"> Idioma
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#" onclick="changeLanguage('es')">
+                            <img src="https://flagcdn.com/w40/es.png" alt="Español" width="20" class="me-2"> Español
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#" onclick="changeLanguage('en')">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="English" width="20" class="me-2"> English
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </nav>
+
 
 <!-- Portada -->
 <div class="container text-center my-5" id="portada">
@@ -109,7 +142,7 @@
     <p class="text-center">Descubre las mejores actividades para disfrutar en tu próximo viaje.</p>
     <div class="row g-4">
         <div class="col-md-4">
-            <div class="card">
+            <div class="card" id="cabalgatas">
                 <img src="images/cabalgata_resized.jpeg" class="card-img-top" alt="Actividad 1">
                 <div class="card-body">
                     <h5 class="card-title">Cabalgatas.</h5>
@@ -216,5 +249,76 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+<script>
+    const translation = {
+        es: {
+            title: "Quebrada de los Cuervos",
+            description: "La Quebrada de los Cuervos pertenece a las quebradas del noreste uruguayo, que son muestra de relictos de selva subtropicales",
+            navbar: ["Portada", "Paisajes", "Actividades", "Conservación", "Contacto"],
+            photosTitle: "Nuestros Paisajes",
+            activitiesTitle: "Actividades",
+            activitiesDescription: "Descubre las mejores actividades para disfrutar en tu próximo viaje.",
+            cabalgatasTitle: "Cabalgatas",
+            cabalgatasDescription: "Embárcate en una aventura única a caballo, explorando la belleza inexplorada de paisajes silvestres que despiertan tus sentidos y conectan con la naturaleza.",
+
+        },
+        en: {
+            title: "Quebrada de los Cuervos",
+            description: "The Quebrada de los Cuervos belongs to the gorges of northeastern Uruguay, which are a sample of subtropical jungle relics.",
+            navbar: ["Home", "Landscapes", "Activities", "Conservation", "Contact"],
+            photosTitle: "Our Landscapes",
+            activitiesTitle: "Activities",
+            activitiesDescription: "Discover the best activities to enjoy on your next trip.",
+            cabalgatasTitle: "Horseback riding",
+            cabalgatasDescription: "Embark on a unique adventure on horseback, exploring the unexplored beauty of wild landscapes that awaken your senses and connect you with nature.",
+        }
+    };
+
+    function changeLanguage(lang) {
+    // Obtener el botón del dropdown
+    const languageDropdown = document.getElementById('languageDropdown');
+    
+    // Cambiar la bandera y el texto del botón según el idioma seleccionado
+    if (lang === 'es') {
+        languageDropdown.innerHTML = `
+            <img src="https://flagcdn.com/w40/es.png" alt="Español" width="20" class="me-2"> Español
+        `;
+    } else if (lang === 'en') {
+        languageDropdown.innerHTML = `
+            <img src="https://flagcdn.com/w40/gb.png" alt="English" width="20" class="me-2"> English
+        `;
+    }
+
+    // Aquí podrías agregar lógica adicional para cambiar el contenido de la página o redirigir según el idioma
+    console.log('Idioma seleccionado:', lang);
+
+            // Cambiar el texto de la portada
+        document.querySelector("#portada h1").innerText = translation[lang].title;
+        document.querySelector("#portada p").innerText = translation[lang].description;
+        document.querySelector("#fotos h2").innerText = translation[lang].photosTitle;
+        document.querySelector("#actividades h2").innerText = translation[lang].activitiesTitle;
+        document.querySelector("#actividades p").innerText = translation[lang].activitiesDescription;
+        document.querySelector("#cabalgatas h5").innerText = translation[lang].cabalgatasTitle;
+        document.querySelector("#cabalgatas p").innerText = translation[lang].cabalgatasDescription;
+
+        // Cambiar los textos de la barra de navegación
+        const navLinks = document.querySelectorAll(".nav-link");
+        translation[lang].navbar.forEach((text, index) => {
+            navLinks[index].innerText = text;
+        });
+}
+
+
+    // Inicializar idioma predeterminado
+    changeLanguage("es");
+</script>
+
+
+
+
 </body>
 </html>
