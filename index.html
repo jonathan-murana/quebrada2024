@@ -61,6 +61,26 @@
             margin-right: 8px;
             font-size: 20px;
         }
+
+        .map-container {
+            position: relative;
+            padding-bottom: 40%; /* Aspect ratio 10:4 */
+            height: 0;
+            overflow: hidden;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px; /* Limit width */
+            margin: 20px auto; /* Center the map */
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
     </style>
 
 
@@ -114,6 +134,14 @@
 <div class="container text-center my-5" id="portada">
     <h1 class="display-4">Quebrada de los Cuervos</h1>
     <p class="lead">La Quebrada de los Cuervos pertenece a las quebradas del noreste uruguayo, que son muestra de relictos de selva subtropicales</p>
+    <div class="map-container">
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51064.983203305965!2d-54.47671142996521!3d-32.92602685625604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95096780d7d51755%3A0x8aa1009d5190fcc1!2sCamping%20Quebrada%20de%20los%20Cuervos!5e0!3m2!1ses-419!2suy!4v1736816550211!5m2!1ses-419!2suy&layer=c" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
 </div>
 
 <!-- Galería de Fotos -->
