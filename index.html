@@ -134,10 +134,7 @@
 <div class="container text-center my-5" id="portada">
     <h1 class="display-4">Quebrada de los Cuervos</h1>
     <p class="lead">La Quebrada de los Cuervos pertenece a las quebradas del noreste uruguayo, que son muestra de relictos de selva subtropicales</p>
-    <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13398.624801460697!2d-54.45179135962287!3d-32.907267978015604!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x950967ef06ba4989%3A0xbf75c2346b5f160a!2sParque%20Municipal%20Quebrada%20de%20los%20Cuervos!5e0!3m2!1ses!2sus!4v1736818261501!5m2!1ses!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+
 </div>
 
 <!-- Galería de Fotos -->
@@ -279,6 +276,16 @@
     </div>
 </div>
 
+
+<div class="container" id="mapa">
+    <h2 class="text-center mb-4">Mapa</h2>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13398.624801460697!2d-54.45179135962287!3d-32.907267978015604!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x950967ef06ba4989%3A0xbf75c2346b5f160a!2sParque%20Municipal%20Quebrada%20de%20los%20Cuervos!5e0!3m2!1ses!2sus!4v1736818261501!5m2!1ses!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+
+
 <!-- Contacto -->
 <div class="container text-center my-5" id="contacto">
     <h2>Contacto</h2>
@@ -293,6 +300,9 @@
     
    
 </div>
+
+
+
 
 <!-- Footer -->
 <footer class="bg-dark text-white text-center py-3">
@@ -327,6 +337,7 @@
             criaCuervosDescription2: "Ver en YouTube",
             volunteeringTitle: "Voluntariado en sitio Jual Bilú",
             volunteeringDescription: "Monitoreo de vida silvestre, fototrampeo, bio construcción, en entre otras actividades.",
+            mapaTitle: "Mapa",
             contactoTitle: "Contacto",
             contactoDescription: "Síguenos en:",
             footerDescription: "\u00A9 2024 Explora la quebrada. Todos los derechos reservados.",
@@ -353,6 +364,7 @@
             criaCuervosDescription2: "Watch on YouTube",
             volunteeringTitle: "Volunteering on site Jual Bilú",
             volunteeringDescription: "Wildlife monitoring, camera trapping, bio construction, among other activities.",
+            mapaTitle: "Map",
             contactoTitle: "Contact",
             contactoDescription: "Follow us on:",
             footerDescription: "\u00A9 2024 Explora la quebrada. All rights reserved.",
@@ -396,6 +408,7 @@
         document.querySelector("#cuervos span").innerText = translation[lang].criaCuervosDescription2;
         document.querySelector("#volunteering h5").innerText = translation[lang].volunteeringTitle;
         document.querySelector("#volunteering p").innerText = translation[lang].volunteeringDescription;
+        document.querySelector("#mapa h2").innerText = translation[lang].mapaTitle;
         document.querySelector("#contacto h2").innerText = translation[lang].contactoTitle;
         document.querySelector("#contacto span").innerText = translation[lang].contactoDescription;
         document.querySelector("footer p").innerText = translation[lang].footerDescription;
