@@ -23,6 +23,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
 
+  /* Fondo oscuro del modal */
+  .modal {
+            display: flex;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Oscurece el fondo */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* La imagen actúa como modal */
+        .modal-content {
+            position: relative;
+        }
+
+        .modal img {
+            max-width: 80%;
+            max-height: 80vh;
+            border-radius: 10px;
+            display: block;
+        }
+
+        /* Botón de cierre en la esquina de la imagen */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            color: black;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .close-btn:hover {
+            background: rgba(255, 255, 255, 1);
+        }
+
+
+
+
+
 
 .card {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -85,6 +133,39 @@
 
 </head>
   <body>
+
+
+
+    <!-- Modal con solo la imagen -->
+    <div id="promoModal" class="modal">
+        
+        <img src="images/charrua.jpeg" alt="Promoción Especial">
+        <button class="close-btn" onclick="cerrarModal()">✖</button>
+    </div>
+
+    <script>
+        function cerrarModal() {
+            document.getElementById("promoModal").style.display = "none";
+        }
+
+        const modal = document.getElementById("promoModal");
+        const closeBtn = document.getElementById("closeBtn");
+
+        // Cierra el modal si se hace clic fuera de la imagen
+        modal.addEventListener("click", function(event) {
+            if (!event.target.closest(".modal-content")) {
+                modal.style.display = "none";
+            }
+        });
+
+        // También cierra el modal al hacer clic en el botón de cierre
+        closeBtn.addEventListener("click", function() {
+            modal.style.display = "none";
+        });
+
+    </script>
+
+
 
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -251,22 +332,22 @@
         </div>
         <div class="col-md-4">
             <div class="card" id="volunteering">
-                <img src="images/vol.jpg" class="card-img-top" alt="Hotel 2">
+                <img src="images/vol.jpg" class="card-img-top" alt="Voluntariado">
                 <div class="card-body">
                     <h5 class="card-title">Voluntariado en sitio Jual Bilú</h5>
                     <p class="card-text">Monitoreo de vida silvestre, fototrampeo, bio construcción, en entre otras actividades.</p>
                 </div>
             </div>
         </div>
-        <!--div class="col-md-4">
+        <div class="col-md-4">
             <div class="card">
-                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Hotel 3">
+                <img src="images/charrua2.jpeg" class="card-img-top" alt="Charrua">
                 <div class="card-body">
-                    <h5 class="card-title">Hotel 3</h5>
-                    <p class="card-text">Descripción breve del hotel 3, perfecto para viajeros con presupuesto limitado.</p>
+                    <h5 class="card-title"></h5>
+                    <p class="card-text"></p>
                 </div>
             </div>
-        </div-->
+        </div>
     </div>
 </div>
 
