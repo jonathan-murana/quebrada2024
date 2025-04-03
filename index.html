@@ -128,6 +128,13 @@
             height: 100%;
             border: none;
         }
+        #turismo {
+    background: rgba(173, 216, 230, 0.3); /* Azul claro translúcido */
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
     </style>
 
 
@@ -212,8 +219,41 @@
 
 </div>
 
+
 <!-- Galería de Fotos -->
-<div class="container" id="fotos">
+<div class="mb-3 container" id="turismo">
+    <h2 class="text-center mb-4">La mejor Semana de Turismo en la Quebrada 
+    </h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/posada.jpeg" class="card-img-top" alt="Foto 1">
+                <!--div class="card-body">
+                    <p class="card-text">Descripción de la foto 1.</p>
+                </div-->
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/toque.jpeg" class="card-img-top" alt="Foto 2">
+                <!--div class="card-body">
+                    <p class="card-text">Cañada del Brujo.</p>
+                </div-->
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/estrella.jpg" class="card-img-top" alt="Foto 3">
+                <!--div class="card-body">
+                    <p class="card-text">Descripción de la foto 3.</p>
+                </div-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Galería de Fotos -->
+<div class="container mt-4" id="fotos">
     <h2 class="text-center mb-4">Nuestros Paisajes</h2>
     <div class="row g-4">
         <div class="col-md-4">
@@ -412,8 +452,7 @@
             contactoTitle: "Contacto",
             contactoDescription: "Síguenos en:",
             footerDescription: "\u00A9 2024 Explora la quebrada. Todos los derechos reservados.",
-
-
+            turismoTitle: "La mejor Semana de Turismo en la Quebrada \uD83C\uDF33\uD83D\uDC34 "
         },
         en: {
             title: "Quebrada de los Cuervos",
@@ -439,6 +478,7 @@
             contactoTitle: "Contact",
             contactoDescription: "Follow us on:",
             footerDescription: "\u00A9 2024 Explora la quebrada. All rights reserved.",
+            turismoTitle: "The Best Tourism Week in the Quebrada \uD83C\uDF33\uD83D\uDC34 ",
         }
     };
 
@@ -483,7 +523,8 @@
         document.querySelector("#contacto h2").innerText = translation[lang].contactoTitle;
         document.querySelector("#contacto span").innerText = translation[lang].contactoDescription;
         document.querySelector("footer p").innerText = translation[lang].footerDescription;
-
+        document.querySelector("#turismo h2").innerText = translation[lang].turismoTitle;
+        
 
 
         // Cambiar los textos de la barra de navegación
